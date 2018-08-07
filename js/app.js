@@ -71,8 +71,8 @@ const allEnemies = [
   new Enemy(405, 230)
 ];
 
-// Place the player object in a variable called player
-
+// Init the Player with new keyword
+const player = new Player(202, 405);
 
 
 // This listens for key presses and sends the keys to your
