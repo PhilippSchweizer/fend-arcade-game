@@ -39,6 +39,29 @@ class Player extends gameElement {
 	}
 	// add empty update function so engine.js can be left unchanged
 	update(dt) {};
+
+	// add input handler to move player
+	handleInput(keyPress) {
+		// move left on the x axis by 102 on left arrow key
+		if (keyPress === 'left' && this.x > 0) {
+			this.x -= 102;
+			// move right on the x axis by 102 on right arrow key
+		} else if (keyPress === 'right' && this.x < 405) {
+			this.x += 102;
+			// move up on the y axis by 83 on up arrow key
+		} else if (keyPress === 'up' && this.y > 0) {
+			this.y -= 83;
+			// move down on the y axis by 83 on down arrow key
+		} else if (keyPress === 'down' && this.y < 405) {
+			this.y += 83;
+			// reset to start position
+		} else if (this.y < 0) {
+			setTimeout(() => {
+				this.x = 202;
+				this.y = 405;
+			}, 800);
+		};
+	};
 }
 
 
