@@ -1,3 +1,17 @@
+// Root Class for Player and Enemy
+class gameElement {
+	constructor(x, y, sprite) {
+		this.x = x;
+		this.y = y;
+		this.sprite = sprite;
+	}
+
+	// Draw the game elements on the screen, required method for game
+	render() {
+		ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+	}
+}
+
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
