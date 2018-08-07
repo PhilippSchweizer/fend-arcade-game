@@ -19,6 +19,17 @@ class Enemy extends gameElement {
 		super(x, y, sprite);
 		this.speed = speeds[Math.floor(Math.random() * speeds.length)];
 	}
+	// Parameter: dt, a time delta between ticks
+	// Collision check is handled here
+	update(dt) {
+		// Multiply movement by 'dt' ensuring the game runs at the same speed for all computers
+		this.x += this.speed * dt;
+		// point which triggers enemy reset to -50 on the x-axis reappearing with different speed
+		if (this.x >= 510) {
+			this.x = -50;
+			this.speed = 100 + Math.floor(Math.random() * 222);
+		}
+	}
 }
 
 // Now write your own player class
