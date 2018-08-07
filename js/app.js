@@ -64,9 +64,13 @@ class Player extends gameElement {
 	};
 }
 
+// Init Enemies
+const allEnemies = [
+	new Enemy(0, 63),
+  new Enemy(202, 147),
+  new Enemy(405, 230)
+];
 
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
 
