@@ -32,9 +32,12 @@ class Enemy extends gameElement {
 	}
 }
 
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
+// Player class focusing on x and y axis
+class Player extends gameElement {
+	constructor(x, y, sprite = 'images/char-boy.png') {
+		super(x, y, sprite);
+	}
+}
 
 
 // Now instantiate your objects.
