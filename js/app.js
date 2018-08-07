@@ -37,6 +37,8 @@ class Player extends gameElement {
 	constructor(x, y, sprite = 'images/char-boy.png') {
 		super(x, y, sprite);
 	}
+	// add empty update function so engine.js can be left unchanged
+	update(dt) {};
 }
 
 
