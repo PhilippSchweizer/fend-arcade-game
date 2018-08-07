@@ -29,6 +29,15 @@ class Enemy extends gameElement {
 			this.x = -50;
 			this.speed = 100 + Math.floor(Math.random() * 222);
 		}
+
+		// Checks for collisions between the player and the enemies
+		if (player.x < this.x + 80 &&
+			player.x + 80 > this.x &&
+			player.y < this.y + 60 &&
+			60 + player.y > this.y) {
+			player.x = 202;
+			player.y = 405;
+		};
 	}
 }
 
